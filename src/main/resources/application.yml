@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: kor-address-mcp-demo
+  main:
+    web-application-type: none
+    banner-mode: off
+  ai:
+    mcp:
+      server:
+        name: kor-address-mcp-demo
+        version: 0.0.1
+
+# NOTE: You must disable the banner and the console logging
+# to allow the STDIO transport to work !!!
+logging.pattern.console:
+
+logging:
+  level:
+    root: debug
+    com.example: DEBUG
+  file:
+    path: /Users/nhn/work/workspace-intellij-ai/kor-address-mcp-demo/logs
