@@ -2,19 +2,19 @@ spring:
   application:
     name: kor-address-mcp-demo
   main:
-    web-application-type: none
-    banner-mode: off
+    web-application-type: none # 애플리케이션을 실행시 웹 서버를 띄우지 않도록 설정
+    banner-mode: off # 애플리케이션 실행시 Spring 배너를 출력하지 않도록 설정
   ai:
     mcp:
       server:
-        stdio: true
+        stdio: true # MCP 서버를 STDIO로 실행하도록 설정
         name: kor-address-mcp-demo
         version: 0.0.1
 
-# NOTE: You must disable the banner and the console logging
-# to allow the STDIO transport to work !!!
+# STDIO 방식의 경우 콘솔에 로그를 출력하지 않도록 설정 (로그를 출력할 경우 MCP 서버가 동작하지 않음)
 logging.pattern.console:
 
+# MCP 서버의 로그는 파일로만 출력하도록 설정
 logging:
   level:
     root: debug
